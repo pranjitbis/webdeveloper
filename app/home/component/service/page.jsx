@@ -68,7 +68,7 @@ const Services = () => {
     },
     {
       image: DataVisualizationServices,
-      title: "Data Visualization Services and ML",
+      title: "Data Visualization Services and AI sulition",
       features: [
         "Power BI, Tableau, Looker Studio dashboards",
         "Custom Data Visualizations",

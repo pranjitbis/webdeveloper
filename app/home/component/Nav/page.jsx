@@ -99,45 +99,64 @@ export default function Nav() {
               <Link href="/about">About Us</Link>
             </li>
             <li className={styles.servicesItem}>
-              <div 
-                className={styles.servicesTrigger} 
+              <div
+                className={styles.servicesTrigger}
                 onClick={toggleServices}
                 onMouseEnter={() => setServicesOpen(true)}
               >
                 <span>Services</span>
-                <IoChevronDown className={`${styles.chevron} ${servicesOpen ? styles.rotated : ''}`} />
+                <IoChevronDown
+                  className={`${styles.chevron} ${
+                    servicesOpen ? styles.rotated : ""
+                  }`}
+                />
               </div>
               {servicesOpen && (
-                <div 
+                <div
                   className={styles.servicesDropdown}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  <Link href="/services/form-filling" onClick={() => setServicesOpen(false)}>
+                  <Link
+                    href="/services/form-filling"
+                    onClick={() => setServicesOpen(false)}
+                  >
                     Form Filling Services
                   </Link>
-                  <Link href="/services/virtual-assistance" onClick={() => setServicesOpen(false)}>
+                  <Link
+                    href="/services/virtual-assistance"
+                    onClick={() => setServicesOpen(false)}
+                  >
                     Virtual Assistance
                   </Link>
-                  <Link href="/services/travel-bookings" onClick={() => setServicesOpen(false)}>
+                  <Link
+                    href="/services/travel-bookings"
+                    onClick={() => setServicesOpen(false)}
+                  >
                     Travel Bookings
                   </Link>
-                  <Link href="/services/data-visualization" onClick={() => setServicesOpen(false)}>
+                  <Link
+                    href="/services/data-visualization"
+                    onClick={() => setServicesOpen(false)}
+                  >
                     Data Visualization
                   </Link>
-                  <Link href="/services/freelancer-hub" onClick={() => setServicesOpen(false)}>
+                  <Link
+                    href="/services/freelancer-hub"
+                    onClick={() => setServicesOpen(false)}
+                  >
                     Freelancer Hub
                   </Link>
                 </div>
               )}
             </li>
             <li>
+              <Link href="/contact">Our Team</Link>
+            </li>
+            <li>
               <Link href="/career">Career</Link>
             </li>
             <li>
               <Link href="/contact">Contact Us</Link>
-            </li>
-            <li>
-              <Link href="/contact">Our Team</Link>
             </li>
           </ul>
 

@@ -5,7 +5,7 @@ import logo from "../../../../public/logo/logo.png";
 import styles from "./Nav.module.css";
 import Link from "next/link";
 import { MdMarkEmailRead } from "react-icons/md";
-import { IoMenu, IoClose } from "react-icons/io5";
+import { IoMenu, IoClose, IoChevronDown } from "react-icons/io5";
 import {
   FaPhoneAlt,
   FaInstagram,
@@ -18,10 +18,15 @@ import "aos/dist/aos.css";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isFixed, setIsFixed] = useState(false); // 🔥 NEW state
+  const [isFixed, setIsFixed] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
   };
 
   useEffect(() => {
@@ -39,8 +44,8 @@ export default function Nav() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration (1 second)
-      once: false, // false = re-trigger animation on scroll up/down
+      duration: 1000,
+      once: false,
     });
   }, []);
 
@@ -93,8 +98,37 @@ export default function Nav() {
             <li>
               <Link href="/about">About Us</Link>
             </li>
-            <li>
-              <Link href="/services">Services</Link>
+            <li className={styles.servicesItem}>
+              <div 
+                className={styles.servicesTrigger} 
+                onClick={toggleServices}
+                onMouseEnter={() => setServicesOpen(true)}
+              >
+                <span>Services</span>
+                <IoChevronDown className={`${styles.chevron} ${servicesOpen ? styles.rotated : ''}`} />
+              </div>
+              {servicesOpen && (
+                <div 
+                  className={styles.servicesDropdown}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <Link href="/services/form-filling" onClick={() => setServicesOpen(false)}>
+                    Form Filling Services
+                  </Link>
+                  <Link href="/services/virtual-assistance" onClick={() => setServicesOpen(false)}>
+                    Virtual Assistance
+                  </Link>
+                  <Link href="/services/travel-bookings" onClick={() => setServicesOpen(false)}>
+                    Travel Bookings
+                  </Link>
+                  <Link href="/services/data-visualization" onClick={() => setServicesOpen(false)}>
+                    Data Visualization
+                  </Link>
+                  <Link href="/services/freelancer-hub" onClick={() => setServicesOpen(false)}>
+                    Freelancer Hub
+                  </Link>
+                </div>
+              )}
             </li>
             <li>
               <Link href="/career">Career</Link>

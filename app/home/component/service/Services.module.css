@@ -74,6 +74,8 @@
 .featuresList {
   list-style: none;
   padding: 0;
+  line-height: 26px;
+  letter-spacing: 0.4px;
   margin-bottom: 2rem;
 }
 

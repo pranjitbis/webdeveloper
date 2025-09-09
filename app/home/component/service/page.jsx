@@ -13,12 +13,12 @@ const Services = () => {
   const services = [
         {
       image: MachineLearningSolutions,
-      title: "Freelancer Services Connect. Work. Earn",
+      title: "Freelancer Services",
       features: [
         "Access verified client projects",
        "Work across diverse categories",
         "Build long-term client relationships",
-        "Secure, on-time payments with escrow protection"
+        "Secure, on-time payments"
       ],
       buttonText: "Resgister",
     },
@@ -48,9 +48,9 @@ const Services = () => {
       image: third,
       title: "E-Commerce Solutions",
       features: [
-        "Catalog & Product Management",
-        "Order & Inventory Management",
-        "Digital Marketing for Sellers",
+        "Managing Catalogs and Products Easily and Efficiently",
+        "Managing Orders and Inventory Smoothly and Effectively",
+        "Helping Sellers Grow Sales with Digital Marketing Strategies",
         "Customer Support Outsourcing",
       ],
       buttonText: "Get Started",
@@ -93,7 +93,6 @@ const Services = () => {
             <div key={index} data-aos="fade-up" className={styles.serviceCard}>
               <Image src={service.image} alt="err" />
               <h2 className={styles.serviceTitle}>{service.title}</h2>
-              <p className={styles.serviceDescription}>{service.description}</p>
 
               <ul className={styles.featuresList}>
                 {service.features.map((feature, featureIndex) => (

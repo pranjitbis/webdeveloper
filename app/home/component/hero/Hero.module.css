@@ -2,7 +2,6 @@
 .heroContainer {
   width: 100%;
   position: relative;
-  margin-top: 69px;
   min-height: 100vh;
   overflow: hidden;
 }

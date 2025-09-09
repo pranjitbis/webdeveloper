@@ -136,6 +136,9 @@ export default function Nav() {
             <li>
               <Link href="/contact">Contact Us</Link>
             </li>
+            <li>
+              <Link href="/contact">Our Team</Link>
+            </li>
           </ul>
 
           <div data-aos="fade-left" className={styles.buttons}>

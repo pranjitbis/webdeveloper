@@ -224,6 +224,8 @@
   gap: 20vw;
 }
 
+
+
 .menuIcons {
   display: none;
 }
@@ -237,7 +239,7 @@
   }
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1220px) {
   .nav {
     padding: 50px 20px 0;
   }
@@ -343,7 +345,7 @@
   .navLinksOpen {
     display: flex;
     align-items: center;
-    gap: 20vw;
+    gap: 10vw;
   }
 }
 /* Services Dropdown Styles */

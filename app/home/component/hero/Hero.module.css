@@ -187,17 +187,10 @@
 
 /* Slide Three Specific Styles */
 .slideThree {
-  background: radial-gradient(
-      circle at 20% 30%,
-      rgba(255, 204, 128, 0.6),
-      transparent 40%
-    ),
-    radial-gradient(circle at 70% 40%, rgba(221, 200, 11, 0.6), transparent 40%),
-    radial-gradient(circle at 50% 70%, rgba(76, 175, 80, 0.4), transparent 40%),
-    #1a1a1a; /* Base dark background */
+  background-image: url("/hero/bg.jpg");
   background-size: cover;
   position: relative;
-  padding:  0 !important;
+  padding: 0 !important;
 }
 
 .welcomeSection {
@@ -290,6 +283,30 @@
 @media (max-width: 480px) {
   .slide h1 {
     font-size: 1.8rem;
+  }
+  .trustBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    height: 90px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .trustBadge img{
+   position: relative;
+   top: 29px; 
+  }
+
+  .welcomeSection {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
   }
 
   .slide p {

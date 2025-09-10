@@ -88,7 +88,7 @@ export default function Hero() {
               <div className={styles.trustBadge}>
                 <Image src={shild} alt="Security shield" width={25} height={25} />
                 <p>
-                  No sign-in required - Your data stays safe (encrypted) - Need help? Call us: +91-9870519002
+                  sign in securely—your data is fully encrypted. For assistance, call +91-9870519002.
                 </p>
               </div>
             </div>

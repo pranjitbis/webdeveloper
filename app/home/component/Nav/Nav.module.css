@@ -6,6 +6,7 @@
   transition: all 0.3s ease;
   height: 100px;
   z-index: 10;
+  background-color: white;
   padding: 0px 30px;
   box-shadow: none; /* No shadow by default */
   border-bottom: 1px solid transparent; /* Prevents layout shift */
@@ -125,6 +126,7 @@
     display: block;
   }
 
+
   .navLinks {
     position: fixed;
     top: 0px;
@@ -240,7 +242,7 @@
 
 @media (max-width: 1220px) {
   .nav {
-    padding: 50px 20px 0;
+    padding: 0px 20px 0;
   }
 
   .navLinks {
@@ -391,6 +393,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  margin: 3px 0;
   transition: background-color 0.3s ease;
   font-weight: 500;
 }

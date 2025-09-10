@@ -11,14 +11,14 @@ import MachineLearningSolutions from "../../../../public/icons/freelancer-3d.png
 
 const Services = () => {
   const services = [
-        {
+    {
       image: MachineLearningSolutions,
       title: "Freelancer Services",
       features: [
         "Access verified client projects",
-       "Work across diverse categories",
+        "Work across diverse categories",
         "Build long-term client relationships",
-        "Secure, on-time payments"
+        "Secure, on-time payments",
       ],
       buttonText: "Resgister",
     },
@@ -73,18 +73,16 @@ const Services = () => {
         "Power BI, Tableau, Looker Studio dashboards",
         "Custom Data Visualizations",
         "Business Reporting",
-        "Real-time Data Monitoring",
+        "AI dashboards turn raw data into clear insights.",
       ],
       buttonText: "Data Visualization Services",
     },
-
   ];
 
   return (
     <section className={styles.services} id="services">
       <div className={styles.container}>
         <h1 className={styles.mainTitle}>Our Services</h1>
-    
 
         <div className={styles.divider}></div>
 

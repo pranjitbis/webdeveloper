@@ -2,12 +2,15 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "./ServiceDetail.module.css";
-import Nav from "../home/component/Nav/page";
-import Footer from "../home/footer/page";
-import Expert from "../../public/icons/ExpertIcons.png";
-import shild from "../../public/icons/shild.png";
-import saveTime from "../../public/icons/save-time.png";
-import HeroImage from "../../public/icons/wmremove.gif";
+import Nav from "../../home/component/Nav/page";
+import Footer from "../../home/footer/page";
+import Expert from "../../../public/icons/ExpertIcons.png";
+import shild from "../../../public/icons/shild.png";
+import saveTime from "../../../public/icons/save-time.png";
+import HeroImage from "../../../public/icons/wmremove.gif";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Image from "next/image";
 const ServiceDetail = () => {
   const [formData, setFormData] = useState({
@@ -139,6 +142,13 @@ const ServiceDetail = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <>
       <Nav />
@@ -167,11 +177,10 @@ const ServiceDetail = () => {
               Get Started Today
             </button>
           </div>
-      
-            <div className={styles.placeholderImage}>
-              <Image src={HeroImage} alt="err" />
-            </div>
-      
+
+          <div className={styles.placeholderImage} data-aos="fade-left">
+            <Image src={HeroImage} alt="err" />
+          </div>
         </section>
 
         {/* Services Overview */}

@@ -182,7 +182,6 @@ const ServiceDetail = () => {
             <Image src={HeroImage} alt="err" />
           </div>
         </section>
-
         {/* Services Overview */}
         <section className={styles.servicesOverview}>
           <h2 className={`${styles.sectionTitle} ${styles.fadeInUp}`}>

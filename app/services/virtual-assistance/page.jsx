@@ -253,7 +253,7 @@ const VirtualAssistance = () => {
                 onMouseEnter={() => setActiveService(index)}
               >
                 <div className={styles.serviceIcon}>
-                  <Image src={service.icon} />
+                  <Image src={service.icon} alt="err"  />
                 </div>
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                 <p className={styles.serviceDescription}>
@@ -263,7 +263,7 @@ const VirtualAssistance = () => {
                   {service.features.map((feature, i) => (
                     <li key={i} className={styles.serviceFeature}>
                       <div className={styles.TickMark}>
-                        <Image src={TickMark} />
+                        <Image src={TickMark} alt="err" />
                         <p>{feature}</p>
                       </div>
                     </li>
@@ -328,7 +328,7 @@ const VirtualAssistance = () => {
                   {plan.features.map((feature, i) => (
                     <li key={i} className={styles.planFeature}>
                       <div className={styles.TickMark}>
-                        <Image src={TickMark} />
+                        <Image src={TickMark} alt="err"  />
                         {feature}
                       </div>
                     </li>

@@ -10,6 +10,7 @@
   padding: 0px 30px;
   box-shadow: none; /* No shadow by default */
   border-bottom: 1px solid transparent; /* Prevents layout shift */
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.137);
 }
 
 

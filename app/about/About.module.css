@@ -220,6 +220,12 @@
   color: white;
 }
 
+.founderPlaceholder img{
+  width: 229px;
+  height: 229px;
+  border-radius: 50%;
+}
+
 .founderPlaceholder svg {
   margin-bottom: 1rem;
 }

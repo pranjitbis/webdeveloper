@@ -129,10 +129,10 @@ const FAQ = () => {
         )}
 
         {/* FAQ Items */}
-        <div className={styles.faqGrid}>
+        <div className={styles.faqGrid}  data-aos="zoom-out-up">
           {currentFAQs.map((faq, index) => (
             <div
-              data-aos="zoom-out-up"
+            
               key={index}
               className={`${styles.faqItem} ${
                 openQuestion === index ? styles.active : ""

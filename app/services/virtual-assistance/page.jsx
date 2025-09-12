@@ -12,6 +12,9 @@ import Marketing from "../../../public/icons/Marketing.png";
 import technical from "../../../public/icons/technical-support.png";
 import TickMark from "../../../public/icons/Mark-Tick.png";
 
+
+
+
 const VirtualAssistance = () => {
   const [formData, setFormData] = useState({
     name: "",

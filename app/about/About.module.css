@@ -13,12 +13,13 @@
 
 /* Hero Section */
 .heroSection {
-  background: linear-gradient(135deg, #1a2a6c 0%, #4facfe 100%);
+  background: linear-gradient(135deg, #1a2a6c 0%, #1081e4 100%);
   color: white;
-  padding: 8rem 2rem 6rem;
+  padding: 11rem 2rem 10rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-radius: 1px 0% 23% 23% ;
 }
 
 .heroSection::before {
@@ -51,9 +52,8 @@
 
 /* Common Styles */
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5rem;
 }
 
 .section {
@@ -197,9 +197,9 @@
 /* Founder Section */
 .founderGrid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
+  grid-template-columns: 2fr 2fr;
   align-items: center;
+  margin: 30px 50px;
 }
 
 .founderImageWrapper {
@@ -207,27 +207,17 @@
   justify-content: center;
 }
 
-.founderPlaceholder {
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  color: white;
-}
+
 
 .founderPlaceholder img{
-  width: 229px;
-  height: 229px;
-  border-radius: 50%;
+  width: 409px;
+  height: 409px;
+  border-radius: 10px;
 }
 
-.founderPlaceholder svg {
-  margin-bottom: 1rem;
+.founderPlaceholder{
+  position: relative;
+  left:6vw;
 }
 
 .founderName {
@@ -247,6 +237,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #4a5568;
+  width: 120%;
   margin-bottom: 1.5rem;
 }
 

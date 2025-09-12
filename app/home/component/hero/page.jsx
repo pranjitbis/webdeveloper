@@ -14,6 +14,34 @@ import namaste from "../../../../public/icons/namaste.png";
 export default function Hero() {
   return (
     <div className={styles.heroContainer}>
+      <SwiperSlide>
+        <div className={`${styles.slide} ${styles.slideThree}`}>
+          <div className={styles.slideContent}>
+            <div className={styles.welcomeSection}>
+              <Image
+                src={namaste}
+                alt="Namaste greeting"
+                width={210}
+                height={210}
+                className={styles.namasteIcon}
+              />
+              <h1>Welcome to Aroliya—let's get started.</h1>
+              <p>
+                Fast, secure, and affordable solutions across form filling,
+                virtual assistance, e-commerce, travel bookings, data
+                visualization, ML, and freelancer services—built to help
+                connect, work, and earn.
+              </p>
+
+              <div className={styles.heroButtons}>
+                <Link href="#services">
+                  <button className={styles.primaryBtn}>View Services</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={0}
@@ -49,12 +77,17 @@ export default function Hero() {
                   <button className={styles.secondaryBtn}>Sign Up</button>
                 </Link>
               </div>
-              
+
               <div className={styles.trustBadge}>
-                <Image src={shild} alt="Security shield" width={30} height={30} />
+                <Image
+                  src={shild}
+                  alt="Security shield"
+                  width={30}
+                  height={30}
+                />
                 <p>
-                  Trusted - Easy - Reliable - Affordable - Innovative — Encrypted
-                  data, free to submit. Help: +91-9870519002
+                  Trusted - Easy - Reliable - Affordable - Innovative —
+                  Encrypted data, free to submit. Help: +91-9870519002
                 </p>
               </div>
             </div>
@@ -72,53 +105,33 @@ export default function Hero() {
             <div className={styles.slideContent}>
               <h1>Work Smarter with Aroliya Freelancer Hub</h1>
               <p>
-                Showcase your skills, get hired, and grow your career faster with
-                a powerful portfolio that proves impact and builds credibility.
+                Showcase your skills, get hired, and grow your career faster
+                with a powerful portfolio that proves impact and builds
+                credibility.
               </p>
-              
+
               <div className={styles.heroButtons}>
                 <Link href="/freelancer-registration">
-                  <button className={styles.primaryBtn}>Register as Freelancer</button>
+                  <button className={styles.primaryBtn}>
+                    Register as Freelancer
+                  </button>
                 </Link>
                 <Link href="/post-job">
                   <button className={styles.outlineBtn}>Post a Job</button>
                 </Link>
               </div>
-              
-              <div className={styles.trustBadge}>
-                <Image src={shild} alt="Security shield" width={25} height={25} />
-                <p>
-                  sign in securely—your data is fully encrypted. For assistance, call +91-9870519002.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
 
-        <SwiperSlide>
-          <div className={`${styles.slide} ${styles.slideThree}`}>
-            <div className={styles.slideContent}>
-              <div className={styles.welcomeSection}>
-                <Image 
-                  src={namaste} 
-                  alt="Namaste greeting" 
-                  width={210} 
-                  height={210}
-                  className={styles.namasteIcon}
+              <div className={styles.trustBadge}>
+                <Image
+                  src={shild}
+                  alt="Security shield"
+                  width={25}
+                  height={25}
                 />
-                <h1>Welcome to Aroliya—let's get started.</h1>
                 <p>
-                  Fast, secure, and affordable solutions across form filling,
-                  virtual assistance, e-commerce, travel bookings, data
-                  visualization, ML, and freelancer services—built to help
-                  connect, work, and earn.
+                  sign in securely—your data is fully encrypted. For assistance,
+                  call +91-9870519002.
                 </p>
-                
-                <div className={styles.heroButtons}>
-                  <Link href="#services">
-                    <button className={styles.primaryBtn}>View Services</button>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

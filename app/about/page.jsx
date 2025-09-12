@@ -40,7 +40,47 @@ export default function About() {
             </p>
           </div>
         </section>
-
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitleCenter} data-aos="fade-down">
+              About the Founder
+            </h2>
+            <div className={styles.founderGrid}>
+         
+              <div className={styles.founderContent} data-aos="fade-left">
+                <h3 className={styles.founderName}>Neeraj Baghel</h3>
+                <p className={styles.founderTitle}>Founder & CEO of Aroliya</p>
+                <div className={styles.founderDescription}>
+                  <p>
+                    Neeraj Baghel, the Founder of Aroliya, is passionate about
+                    using technology to solve real-world problems. With a
+                    background in data science, artificial intelligence, and
+                    digital innovation, Neeraj has been recognized for his
+                    performance and creativity in professional roles.
+                    His vision for Aroliya is not just about offering
+                    services—it's about building a platform where businesses
+                    find solutions and freelancers find opportunities.
+                    Neeraj's leadership combines innovation, dedication, and
+                    strategic thinking, making Aroliya a brand that stands for
+                    reliability and growth. His belief is simple:
+                    <em>
+                      "Work should be smarter, not harder—and technology should
+                      make life easier for everyone."
+                    </em>
+                  </p>
+                </div>
+              </div>
+                   <div className={styles.founderImageWrapper}>
+                <div
+                  className={styles.founderPlaceholder}
+                  data-aos="fade-right"
+                >
+                  <Image src={about} alt="err" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Introduction Section */}
         <section className={styles.section}>
           <div className={styles.container}>
@@ -96,52 +136,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        {/* Founder Section */}
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionTitleCenter} data-aos="fade-down">
-              About the Founder
-            </h2>
-            <div className={styles.founderGrid}>
-              <div className={styles.founderImageWrapper}>
-                <div
-                  className={styles.founderPlaceholder}
-                  data-aos="fade-right"
-                >
-                  <Image src={about} alt="err" />
-                </div>
-              </div>
-              <div className={styles.founderContent} data-aos="fade-left">
-                <h3 className={styles.founderName}>Neeraj Baghel</h3>
-                <p className={styles.founderTitle}>Founder & CEO of Aroliya</p>
-                <div className={styles.founderDescription}>
-                  <p>
-                    Neeraj Baghel, the Founder of Aroliya, is passionate about
-                    using technology to solve real-world problems. With a
-                    background in data science, artificial intelligence, and
-                    digital innovation, Neeraj has been recognized for his
-                    performance and creativity in professional roles.
-                  </p>
-                  <p>
-                    His vision for Aroliya is not just about offering
-                    services—it's about building a platform where businesses
-                    find solutions and freelancers find opportunities.
-                  </p>
-                  <p>
-                    Neeraj's leadership combines innovation, dedication, and
-                    strategic thinking, making Aroliya a brand that stands for
-                    reliability and growth. His belief is simple:
-                    <em>
-                      "Work should be smarter, not harder—and technology should
-                      make life easier for everyone."
-                    </em>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Vision & Mission Section */}
+
         <section className={`${styles.section} ${styles.accentSection}`}>
           <div className={styles.container}>
             <div className={styles.visionMissionGrid} data-aos="fade-up">

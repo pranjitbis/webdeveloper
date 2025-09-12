@@ -117,6 +117,12 @@ export default function Nav() {
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   <Link
+                    href="/services/freelancer-hub"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    Freelancer Hub
+                  </Link>
+                  <Link
                     href="/services/form-filling"
                     onClick={() => setServicesOpen(false)}
                   >
@@ -128,23 +134,24 @@ export default function Nav() {
                   >
                     Virtual Assistance
                   </Link>
+
+                  <Link
+                    href="/services/e-eommerce-solutions"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    E-Commerce Solutions
+                  </Link>
                   <Link
                     href="/services/travel-bookings"
                     onClick={() => setServicesOpen(false)}
                   >
-                    Travel Bookings
+                    Travel & Hotel Booking
                   </Link>
                   <Link
                     href="/services/data-visualization"
                     onClick={() => setServicesOpen(false)}
                   >
-                    Data Visualization
-                  </Link>
-                  <Link
-                    href="/services/freelancer-hub"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    Freelancer Hub
+                    Data Visualization and AI solution
                   </Link>
                 </div>
               )}

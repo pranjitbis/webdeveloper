@@ -21,7 +21,7 @@ import "aos/dist/aos.css";
 import tick from "../../../public/icons/Mark-Tick.png";
 import styles from "./EcommerceSolutions.module.css";
 import Nav from "@/app/home/component/Nav/page";
-import ecomarce from "../../../public/icons/ecommerce.gif"
+import ecomarce from "../../../public/icons/ecommerce.gif";
 import Image from "next/image";
 const EcommerceSolutions = () => {
   useEffect(() => {
@@ -125,27 +125,6 @@ const EcommerceSolutions = () => {
     },
   ];
 
-  const experts = [
-    {
-      img: "/images/expert1.jpg",
-      icon: <FaLightbulb />,
-      name: "Priya Sharma",
-      role: "E-commerce Strategist",
-    },
-    {
-      img: "/images/expert2.jpg",
-      icon: <FaPencilRuler />,
-      name: "Rahul Verma",
-      role: "UI/UX Designer",
-    },
-    {
-      img: "/images/expert3.jpg",
-      icon: <FaCode />,
-      name: "Ananya Patel",
-      role: "Full Stack Developer",
-    },
-  ];
-
   const testimonials = [
     {
       text: "“Our sales grew 40% within 3 months after adopting their platform.”",
@@ -182,12 +161,12 @@ const EcommerceSolutions = () => {
               by businesses worldwide.
             </p>
             <div className={styles.heroBtns}>
-              <button className={styles.btnPrimary}>Start Free Trial</button>
+              <button className={styles.btnPrimary}>Start Now</button>
               <button className={styles.btnOutline}>View Demo</button>
             </div>
           </div>
           <div className={styles.heroImage}>
-           <Image src={ecomarce} alt="ss"/>
+            <Image src={ecomarce} alt="ss" />
           </div>
         </div>
       </section>
@@ -239,11 +218,11 @@ const EcommerceSolutions = () => {
                 {plan.features.map((feature, i) => (
                   <li key={i} className={styles.featureItem}>
                     {feature.included ? (
-                    <Image src={tick} alt="err"/>
+                      <Image src={tick} alt="err" />
                     ) : (
                       <span className={styles.crossIcon}>✖</span>
                     )}
-                    {feature.text}
+                    <p> {feature.text}</p>
                   </li>
                 ))}
               </ul>
@@ -251,8 +230,6 @@ const EcommerceSolutions = () => {
           ))}
         </div>
       </section>
-
- 
 
       {/* Testimonials */}
       <section className={styles.testimonials}>

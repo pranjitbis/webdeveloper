@@ -96,7 +96,7 @@
 
 .heroText {
   flex: 1;
-  min-width: 300px;
+  width: 100%;
 }
 
 .heroText h1 {
@@ -108,6 +108,8 @@
 .heroText p {
   font-size: 1.1rem;
   line-height: 1.6;
+  width: 100%;
+  padding: 0px 5px;
   margin-bottom: 2rem;
 }
 
@@ -122,9 +124,9 @@
   text-align: center;
 }
 
-.heroImage img{
-    height: 400px;
-    width: 500px;
+.heroImage img {
+  height: 400px;
+  width: 500px;
 }
 
 .heroIcon {
@@ -229,16 +231,15 @@
   gap: 0.5rem;
 }
 
-.priceCard img{
-    width: 15px;
-    height: 15px;
+.priceCard img {
+  width: 15px;
+  height: 15px;
 }
 
 .recommended {
   border: 2px solid #0070f3;
   transform: scale(1.05);
 }
-
 
 /* =============================
    Testimonials Section
@@ -354,5 +355,40 @@
   .btnSecondary {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
+    margin: auto;
+    gap: 0;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 3rem 0rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .heroText {
+    position: relative;
+    top: 290px;
+  }
+
+  .heroImage img {
+    height: 300px;
+    width: 350px;
+    position: relative;
+    bottom: 350px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 2fr));
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .icon p{
+    margin: 110px 0;
+  }
+  .featureItem p{
+    font-size: 12px !important;
+  }
+  .sectionHead p{
+    font-size: 13px;
   }
 }

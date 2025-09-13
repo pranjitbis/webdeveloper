@@ -383,8 +383,6 @@
   .heroImage img {
     height: 300px;
     width: 350px;
-    position: relative;
-    bottom: 350px;
   }
   .grid {
     display: grid;

@@ -321,31 +321,42 @@
    Responsive
    ============================= */
 @media (max-width: 992px) {
-  .heroText h1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
   .hero .container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: auto;
     text-align: center;
   }
 
-  .heroText h1 {
-    font-size: 2rem;
+  .heroImage {
+    position: relative;
+    bottom: 350px;
   }
 
-  .heroIcon {
-    font-size: 4rem;
+  .heroImage img {
+    width: 400px;
   }
 
+  .heroText {
+    position: relative;
+    top: 400;
+  }
+
+  .heroBtns {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
   .grid {
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 2fr));
+    justify-content: center;
+    gap: 5rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .heroText h1 {
     font-size: 1.7rem;
   }
@@ -382,13 +393,13 @@
     gap: 6rem;
   }
 
-  .icon p{
+  .icon p {
     margin: 110px 0;
   }
-  .featureItem p{
+  .featureItem p {
     font-size: 12px !important;
   }
-  .sectionHead p{
+  .sectionHead p {
     font-size: 13px;
   }
 }

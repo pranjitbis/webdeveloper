@@ -59,8 +59,8 @@ const Team = () => {
       image: "/team/pranjit.jpeg",
       bio: "Project Manager & Full Stack Developer creating useful websites and guiding teams successfully.",
       social: {
-        twitter: "https://github.com/pranjitbis/",
-        github: "https://www.linkedin.com/in/pranjit-biswas-42066526b/",
+        github: "https://github.com/pranjitbis/",
+        linkedin: "https://www.linkedin.com/in/pranjit-biswas-42066526b/",
       },
     },
   ];

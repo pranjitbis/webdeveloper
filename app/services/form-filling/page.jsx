@@ -9,6 +9,10 @@ import shild from "../../../public/icons/shild.png";
 import saveTime from "../../../public/icons/save-time.png";
 import HeroImage from "../../../public/icons/wmremove.gif";
 import AOS from "aos";
+import formFilling from "../../../public/icons/form-filling-service.png";
+import support from "../../../public/icons/form-support.png";
+import Error from "../../../public/icons/Error-Free-Filling.png";
+import Professional from "../../../public/icons/Professional-Online-Application.png";
 import "aos/dist/aos.css";
 
 import Image from "next/image";
@@ -88,27 +92,10 @@ const ServiceDetail = () => {
     {
       id: "education",
       title: "Education & Admission Forms",
-      services: [
-        "College admission forms (Delhi University, Mumbai University, etc.)",
-        "Entrance exams (JEE, NEET, CLAT, CAT, GATE, etc.)",
-        "Scholarship forms (National Scholarship Portal, state-level scholarships)",
-        "IGNOU / NIOS admission & exam forms",
-      ],
     },
     {
       id: "government-schemes",
       title: "Government Schemes & Services",
-      services: [
-        "Aadhaar update / correction requests",
-        "PAN card application",
-        "Voter ID registration / correction",
-        "Passport application",
-        "Ration card application",
-        "PM Kisan Samman Nidhi Yojana",
-        "Ayushman Bharat (PMJAY) health card",
-        "E-Shram card registration",
-        "State-specific schemes (e.g., Ladli Laxmi, Kanyadan, etc.)",
-      ],
     },
     {
       id: "banking",
@@ -202,9 +189,6 @@ const ServiceDetail = () => {
                 onClick={() => setActiveCategory(index)}
               >
                 <h3>{category.title}</h3>
-                <div className={styles.servicesCount}>
-                  {category.services.length} services
-                </div>
               </div>
             ))}
           </div>
@@ -273,9 +257,10 @@ const ServiceDetail = () => {
           </h2>
 
           <div className={styles.benefitsGrid}>
+            {/* Existing Benefit Cards */}
             <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
               <div className={styles.benefitIcon}>
-                <Image src={saveTime} alt="err" />
+                <Image src={saveTime} alt="Save Time" />
               </div>
               <h4>Save Time</h4>
               <p>
@@ -285,7 +270,7 @@ const ServiceDetail = () => {
 
             <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
               <div className={styles.benefitIcon}>
-                <Image src={shild} alt="err" />
+                <Image src={shild} alt="Secure" />
               </div>
               <h4>Secure</h4>
               <p>
@@ -293,17 +278,46 @@ const ServiceDetail = () => {
               </p>
             </div>
 
+            {/* New Form Filling Service Keywords */}
+
             <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
               <div className={styles.benefitIcon}>
-                <Image src={Expert} alt="err" />
+                <Image src={formFilling} alt="Secure" />
               </div>
-              <h4>Expert Guidance</h4>
+              <h4>Government Job Form Filling Help</h4>
               <p>
-                Get advice from professionals who understand the requirements
+                Dedicated assistance for Sarkari exam and recruitment forms.
+              </p>
+            </div>
+
+            <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
+              <div className={styles.benefitIcon}>
+                <Image src={support} alt="Secure" />
+              </div>
+              <h4>Application Form Submission Support</h4>
+              <p>Guided application filing to avoid rejection and errors.</p>
+            </div>
+
+            <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
+                 <div className={styles.benefitIcon}>
+                <Image src={Error} alt="Secure" />
+              </div>
+              <h4>Error-Free Form Filling Service</h4>
+              <p>Ensure 100% accuracy and timely submissions every time.</p>
+            </div>
+
+            <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
+                 <div className={styles.benefitIcon}>
+                <Image src={Professional} alt="Secure" />
+              </div>
+              <h4>Professional Online Application Filling</h4>
+              <p>
+                Expert guidance for students, job seekers, and professionals.
               </p>
             </div>
           </div>
         </section>
+
         <section className={styles.contactFormSection}>
           <div className={styles.formContainer}>
             <div className={styles.formHeader}>

@@ -317,6 +317,224 @@
   justify-content: center;
 }
 
+/* Benefits Section - Professional Card Design */
+.benefits {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.benefitCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefitCard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.benefitIcon {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.benefitCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.benefitCard p {
+  color: #64748b;
+  line-height: 1.6;
+}
+/* Services Section */
+.services {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.serviceItem {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.serviceIcon {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.serviceContent {
+  flex: 1;
+}
+
+.serviceDesc {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.serviceFeatures {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.serviceFeatures li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.serviceFeatures li:before {
+  content: "•";
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.platforms {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 12rem 2rem;
+  background-color: #f0f7ff;
+}
+
+.benefitsList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.checkIcon {
+  color: #10b981;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Audience Section */
+.audience {
+  padding: 5rem 2rem;
+}
+
+.audienceList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.audienceItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaContent p {
+  margin: 20px 0px;
+}
+
+.ctaButton {
+  background-color: white;
+  color: #3b82f6;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ctaSubtext {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .serviceItem {
+    flex-direction: column;
+  }
+
+  .serviceIcon {
+    margin-bottom: 1rem;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefitCard {
+    padding: 1.5rem;
+  }
+}
+
 /* =============================
    Responsive
    ============================= */
@@ -331,7 +549,7 @@
 
   .heroImage {
     position: relative;
-    bottom: 350px;
+    bottom: 340px;
   }
 
   .heroImage img {
@@ -340,9 +558,12 @@
 
   .heroText {
     position: relative;
-    top: 400;
+    top: 400px;
   }
 
+  .heroText p {
+    padding: 0px 8px;
+  }
   .heroBtns {
     margin: auto;
     display: flex;
@@ -356,9 +577,17 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 620px) {
   .heroText h1 {
     font-size: 1.7rem;
+  }
+
+  .sectionHead h2 {
+    font-size: 23px;
+  }
+
+  .sectionHead p {
+    font-size: 15px;
   }
 
   .btnPrimary,
@@ -378,6 +607,11 @@
   .heroText {
     position: relative;
     top: 290px;
+  }
+
+  .heroImage {
+    position: relative;
+    bottom: 300px;
   }
 
   .heroImage img {

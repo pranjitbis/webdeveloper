@@ -14,6 +14,11 @@ import {
   FaPencilRuler,
   FaCode,
   FaCheckCircle,
+  FaTruck,
+  FaGlobe,
+  FaUsers,
+  FaMoneyBillAlt,
+  FaHandsHelping,
 } from "react-icons/fa";
 import Footer from "@/app/home/footer/page";
 import AOS from "aos";
@@ -23,6 +28,7 @@ import styles from "./EcommerceSolutions.module.css";
 import Nav from "@/app/home/component/Nav/page";
 import ecomarce from "../../../public/icons/ecommerce.gif";
 import Image from "next/image";
+
 const EcommerceSolutions = () => {
   useEffect(() => {
     AOS.init({
@@ -140,6 +146,45 @@ const EcommerceSolutions = () => {
     },
   ];
 
+  const benefits = [
+    {
+      icon: <FaHandsHelping />,
+      title: "End-to-End Support",
+      description:
+        "From product listing to customer care, we handle everything for your e-commerce business.",
+    },
+    {
+      icon: <FaGlobe />,
+      title: "Multi-Platform Expertise",
+      description:
+        "Amazon, Flipkart, Shopify, WooCommerce & more - we know all the major platforms inside out.",
+    },
+    {
+      icon: <FaRocket />,
+      title: "Scalable Solutions",
+      description:
+        "Our services grow with your business, suitable for startups, SMEs, and enterprises.",
+    },
+    {
+      icon: <FaMoneyBillAlt />,
+      title: "Cost-Effective Plans",
+      description:
+        "Affordable packages without compromising quality, with transparent pricing.",
+    },
+    {
+      icon: <FaUsers />,
+      title: "Dedicated Team",
+      description:
+        "Experienced e-commerce professionals at your service, committed to your success.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Secure & Reliable",
+      description:
+        "Robust security measures and reliable infrastructure to keep your store running smoothly.",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -155,10 +200,11 @@ const EcommerceSolutions = () => {
       <section className={styles.hero}>
         <div className={styles.container} data-aos="fade-up">
           <div className={styles.heroText}>
-            <h1>Transform Your Online Business</h1>
+            <h1>E-Commerce Solutions by Aroliya</h1>
             <p>
-              Powerful, scalable, and user-friendly e-commerce solutions trusted
-              by businesses worldwide.
+              Aroliya delivers end-to-end E‑Commerce Solutions to build, manage,
+              and scale online stores—covering catalog, orders, support, and
+              marketing.
             </p>
             <div className={styles.heroBtns}>
               <button className={styles.btnPrimary}>Start Now</button>
@@ -166,15 +212,40 @@ const EcommerceSolutions = () => {
             </div>
           </div>
           <div className={styles.heroImage}>
-            <Image src={ecomarce} alt="ss" />
+            <Image src={ecomarce} alt="E-commerce solutions" />
           </div>
+        </div>
+      </section>
+
+      {/* Benefits Section - Professional Card Design */}
+      <section className={styles.benefits}>
+        <div className={styles.sectionHead}>
+          <h2>Why Choose Aroliya for Your E-Commerce Business?</h2>
+          <p>
+            We provide comprehensive solutions that drive growth and success for
+            your online store
+          </p>
+        </div>
+        <div className={styles.benefitsGrid}>
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className={styles.benefitCard}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className={styles.benefitIcon}>{benefit.icon}</div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Features */}
       <section className={styles.features}>
         <div className={styles.sectionHead}>
-          <h2>Why Choose Us?</h2>
+          <h2>Platform Features</h2>
           <p>
             Comprehensive tools to manage, grow, and secure your online store.
           </p>
@@ -218,7 +289,7 @@ const EcommerceSolutions = () => {
                 {plan.features.map((feature, i) => (
                   <li key={i} className={styles.featureItem}>
                     {feature.included ? (
-                      <Image src={tick} alt="err" />
+                      <Image src={tick} alt="Included" />
                     ) : (
                       <span className={styles.crossIcon}>✖</span>
                     )}
@@ -245,6 +316,27 @@ const EcommerceSolutions = () => {
           ))}
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaContent} data-aos="fade-up">
+          <h2>📞 Get Started with Aroliya's E-Commerce Solutions</h2>
+          <p>
+            Don't let e-commerce management slow you down. Focus on growing your
+            brand while we handle the back-end operations.
+          </p>
+          <p>
+            <strong>Ready to scale your online business?</strong>
+          </p>
+          <button className={styles.ctaButton}>
+            Contact Us Now for a free consultation
+          </button>
+          <p className={styles.ctaSubtext}>
+            We'll create a custom package tailored to your needs.
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

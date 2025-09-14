@@ -157,7 +157,7 @@ export default function Nav() {
               )}
             </li>
             <li>
-              <Link href="/contact">Our Team</Link>
+              <Link href="/our-team">Our Team</Link>
             </li>
             <li>
               <Link href="/career">Career</Link>

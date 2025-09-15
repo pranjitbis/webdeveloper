@@ -23,7 +23,7 @@ import {
   FaTruck,
   FaGraduationCap,
 } from "react-icons/fa";
-import data from '../../../public/icons/data-visualization.png'
+import data from "../../../public/icons/data-visualization.png";
 
 const DataVisualization = () => {
   const features = [
@@ -78,6 +78,7 @@ const DataVisualization = () => {
         "Basic Chart Types",
         "Data Import from CSV & Excel",
         "Email Support",
+        "✔ 20+ Chart Types",
       ],
     },
     {
@@ -117,6 +118,74 @@ const DataVisualization = () => {
       text: "“Their enterprise-grade solution integrated seamlessly with our existing ERP system.”",
       author: "David Miller – CIO, Logistics Corp",
     },
+    {
+      text: "“Predictive analytics allowed us to forecast sales accurately and optimize inventory.”",
+      author: "Priya Sharma – Supply Chain Manager",
+    },
+    {
+      text: "“Visual dashboards made it easy for executives to understand complex KPIs.”",
+      author: "Rohan Verma – CEO, FinTech Solutions",
+    },
+    {
+      text: "“The platform automated our reporting processes, saving hundreds of man-hours monthly.”",
+      author: "Emily Johnson – Operations Lead",
+    },
+    {
+      text: "“We gained actionable insights into customer trends and engagement patterns.”",
+      author: "Arjun Patel – E-Commerce Head",
+    },
+    {
+      text: "“The analytics tool provided granular data that helped us improve campaign ROI.”",
+      author: "Sara Lee – Marketing Analyst",
+    },
+    {
+      text: "“Integration with multiple data sources was smooth, allowing unified reporting across departments.”",
+      author: "Karan Mehta – IT Manager",
+    },
+    {
+      text: "“Our decision-making process has become faster and more confident thanks to visual insights.”",
+      author: "Michael Brown – Business Analyst",
+    },
+    {
+      text: "“The solution helped identify bottlenecks in operations and suggested actionable improvements.”",
+      author: "Ananya Reddy – Operations Head",
+    },
+    {
+      text: "“Custom dashboards allowed executives to monitor metrics that matter most to them.”",
+      author: "Vikram Singh – Strategy Director",
+    },
+    {
+      text: "“The real-time reporting feature made our client presentations more data-backed and persuasive.”",
+      author: "Sofia Martinez – Client Relations Manager",
+    },
+    {
+      text: "“We now detect anomalies in sales data immediately, reducing losses and errors.”",
+      author: "Ravi Kumar – Analytics Lead",
+    },
+    {
+      text: "“The platform’s visualization tools made our complex datasets understandable at a glance.”",
+      author: "Emily Davis – Data Scientist",
+    },
+    {
+      text: "“Cross-team collaboration improved because everyone had access to the same metrics.”",
+      author: "Arjun Desai – Product Manager",
+    },
+    {
+      text: "“We can now track KPIs in real-time and take proactive actions immediately.”",
+      author: "Priya Nair – Operations Director",
+    },
+    {
+      text: "“The insights gained helped us tailor marketing strategies more effectively.”",
+      author: "Michael Chen – Digital Marketing Lead",
+    },
+    {
+      text: "“Reporting dashboards reduced dependency on manual Excel reports significantly.”",
+      author: "Rajesh Kumar – Finance Head",
+    },
+    {
+      text: "“This tool has become integral to our quarterly business reviews and planning.”",
+      author: "Sophia Williams – Strategy Analyst",
+    },
   ];
 
   return (
@@ -147,7 +216,7 @@ const DataVisualization = () => {
             </div>
           </div>
           <div className={styles.heroImage}>
-           <Image src={data} alt="ss"/>
+            <Image src={data} alt="ss" />
           </div>
         </div>
       </section>
@@ -287,13 +356,22 @@ const DataVisualization = () => {
         <div className={styles.sectionHead}>
           <h2>What Our Clients Say</h2>
         </div>
-        <div className={styles.grid}>
-          {testimonials.map((t, i) => (
-            <div key={i} className={styles.testimonial}>
-              <p>{t.text}</p>
-              <h4>{t.author}</h4>
-            </div>
-          ))}
+        <div className={styles.slider}>
+          <div className={styles.slideTrack}>
+            {testimonials.map((t, i) => (
+              <div key={i} className={styles.testimonial}>
+                <p>{t.text}</p>
+                <h4>{t.author}</h4>
+              </div>
+            ))}
+            {/* Duplicate for smooth infinite scroll */}
+            {testimonials.map((t, i) => (
+              <div key={`dup-${i}`} className={styles.testimonial}>
+                <p>{t.text}</p>
+                <h4>{t.author}</h4>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

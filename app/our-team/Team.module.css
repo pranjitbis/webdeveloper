@@ -1,11 +1,10 @@
 /* Team Section Styles */
 .teamSection {
-  padding: 7rem 2rem;
+  padding: 7rem 0rem;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -55,25 +54,6 @@
 .teamCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.imageContainer {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.memberImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.5s ease;
 }
 
 .teamCard:hover .memberImage {
@@ -201,17 +181,499 @@
   .teamSection {
     padding: 3rem 1rem;
   }
-  
+
   .title {
     font-size: 2rem;
   }
-  
+
   .teamGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .imageContainer {
     height: 250px;
+  }
+} /* Team Section Styles */
+.teamSection {
+  padding: 7rem 0rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #3b82f6;
+  background: #f0f7ff;
+}
+
+.activeTab {
+  color: #3b82f6;
+  background: #f0f7ff;
+  position: relative;
+}
+
+.activeTab::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 3px;
+}
+
+/* Section Intro */
+.sectionIntro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionIntro p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Team Grid */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+  gap: 5rem;
+  padding: 0rem 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Team Card */
+.teamCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.memberImage {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.teamCard:hover .memberImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.socialLinks {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover .socialLinks {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Member Info */
+.memberInfo {
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.memberRole {
+  color: #3b82f6;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.memberBio {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Roles Section */
+.rolesSection {
+  margin: 10rem 0;
+  padding: 4rem 0 0;
+  background-color: rgb(228, 235, 243) ;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 3px;
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0px 3rem 5rem;
+}
+
+.roleCard {
+  background: rgb(211, 224, 238);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.roleIcon {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 1.2rem;
+}
+
+.roleCard h4 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.roleCard p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Culture Section */
+.cultureSection {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  margin: 3rem 1rem 5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.cultureStatement {
+  background: #f0f7ff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.cultureStatement p {
+  font-size: 1.2rem;
+  color: #1e293b;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+
+
+.differenceSection h4 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.differenceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  background-color: white;
+  box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.171);
+  padding: 3rem;
+  border-radius: 30px;
+}
+
+.differenceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.checkmark {
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.differenceItem h5 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.3rem;
+}
+
+.differenceItem p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* Values Section */
+.valuesSection {
+  margin-bottom: 3rem;
+  padding: 0px 1rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.valueCard {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+}
+
+.valueCard h4 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.valueCard p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Closing Section */
+.closingSection {
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  border-radius: 16px;
+  padding: 4rem 5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+}
+
+.closingContent h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.closingContent p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 5rem 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    margin: 0.2rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .imageContainer {
+    height: 250px;
+  }
+
+  .rolesGrid,
+  .differenceGrid,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cultureSection {
+    padding: 1.5rem;
+  }
+
+  .closingSection {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .closingContent h3 {
+    font-size: 1.8rem;
+  }
+
+  .closingContent p {
+    font-size: 1rem;
   }
 }

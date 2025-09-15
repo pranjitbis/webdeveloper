@@ -585,6 +585,11 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .hero {
+  margin: -69px 0;
+  }
+}
 @media (max-width: 400px) {
   .ctaButton,
   .primaryButton {
@@ -595,18 +600,18 @@
     border-radius: 8px;
     font-size: 0.9rem;
   }
-  .servicesGrid{
+  .servicesGrid {
     padding: 10px;
   }
 
   .secondaryButton {
     font-size: 1rem;
   }
- .graphicElement {
-  height: 300px;
- }
+  .graphicElement {
+    height: 300px;
+  }
 
-  .graphicElement img{
+  .graphicElement img {
     height: 400px;
   }
 }

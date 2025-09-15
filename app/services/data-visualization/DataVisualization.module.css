@@ -281,33 +281,101 @@
 
 /* Testimonials */
 .testimonials {
-  padding: 180px 20px;
-  background: #f8fafc;
+  padding: 4rem 0rem;
+  background: #f9f9f9;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
 }
 
-.testimonial {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+.sectionHead h2 {
   text-align: center;
-  transition: transform 0.3s ease;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Slider wrapper */
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track for auto-scroll */
+.slideTrack {
+  display: flex;
+  gap: 1rem;
+  width: calc(300px * 40); /* card width * total slides (adjust as needed) */
+  animation: scroll 75s linear infinite;
+}
+
+/* Individual testimonial card */
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 600px;
+  flex-shrink: 0;
 }
 
 .testimonial:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .testimonial p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
   font-style: italic;
-  color: #374151;
-  margin-bottom: 15px;
-  line-height: 1.5;
 }
 
 .testimonial h4 {
+  font-size: 0.95rem;
+  color: #0070f3;
   font-weight: 600;
-  color: #111827;
+  text-align: right;
+}
+
+/* Auto-scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 20)); /* move half the total width */
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .slideTrack {
+    width: calc(260px * 40);
+    animation: scroll 50s linear infinite;
+  }
+  .testimonial {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideTrack {
+    width: calc(220px * 40);
+    animation: scroll 60s linear infinite;
+  }
+  .testimonial {
+    width: 220px;
+    padding: 1.5rem;
+  }
+  .testimonial p {
+    font-size: 0.9rem;
+  }
+  .testimonial h4 {
+    font-size: 0.85rem;
+  }
 }
 
 /* CTA */

@@ -19,7 +19,15 @@ import {
   FaUsers,
   FaMoneyBillAlt,
   FaHandsHelping,
+  FaBox,
+  FaBoxOpen,
+  FaAd,
+  FaStore,
+  FaAmazon,
+  FaIndustry,
+  FaChartBar,
 } from "react-icons/fa";
+
 import Footer from "@/app/home/footer/page";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -130,7 +138,6 @@ const EcommerceSolutions = () => {
       primary: false,
     },
   ];
-
   const testimonials = [
     {
       text: "“Our sales grew 40% within 3 months after adopting their platform.”",
@@ -143,6 +150,74 @@ const EcommerceSolutions = () => {
     {
       text: "“Fantastic support and user-friendly tools. Highly recommend this team!”",
       author: "Emily Rodriguez – Home Decor",
+    },
+    {
+      text: "“They streamlined our e-commerce operations, saving us hours every week.”",
+      author: "Rajesh Verma – Organic Store",
+    },
+    {
+      text: "“Customer engagement increased significantly thanks to their tailored strategies.”",
+      author: "Priya Nair – Beauty & Wellness",
+    },
+    {
+      text: "“The automation features reduced our manual workload by 60%.”",
+      author: "James Miller – Electronics Hub",
+    },
+    {
+      text: "“Professional, responsive, and results-driven service. Couldn’t be happier!”",
+      author: "Amit Shah – Bookstore Online",
+    },
+    {
+      text: "“Helped us launch our first online store smoothly and professionally.”",
+      author: "Sophia Williams – Handcrafted Goods",
+    },
+    {
+      text: "“They turned complex data into clear insights that improved our decisions.”",
+      author: "Daniel Kim – Food Delivery",
+    },
+    {
+      text: "“Our repeat customers doubled within 6 months of using their solutions.”",
+      author: "Ananya Gupta – Fashion Brand",
+    },
+    {
+      text: "“Reliable and consistent support that keeps our business running smoothly.”",
+      author: "Mohammed Ali – Travel Services",
+    },
+    {
+      text: "“Creative marketing strategies brought us thousands of new customers.”",
+      author: "Olivia Brown – Jewelry Store",
+    },
+    {
+      text: "“Seamless integration with Amazon and Flipkart boosted our sales rapidly.”",
+      author: "Vikram Singh – Electronics Retailer",
+    },
+    {
+      text: "“User-friendly dashboards made managing operations a breeze.”",
+      author: "Emma Davis – Fitness Equipment",
+    },
+    {
+      text: "“They deliver results with professionalism and dedication every time.”",
+      author: "Carlos Martinez – Furniture Store",
+    },
+    {
+      text: "“Their customer service tools improved our response time drastically.”",
+      author: "Meera Krishnan – Cosmetics Brand",
+    },
+    {
+      text: "“Our brand visibility skyrocketed after their digital campaigns.”",
+      author: "David Johnson – Sports Apparel",
+    },
+    {
+      text: "“Great value for money and unmatched expertise in e-commerce.”",
+      author: "Arjun Patel – Grocery Mart",
+    },
+    {
+      text: "“They provided personalized solutions that fit our unique business needs.”",
+      author: "Sophia Lee – Pet Supplies",
+    },
+    {
+      text: "“We now manage orders and inventory effortlessly, thanks to their system.”",
+      author: "Karan Mehta – Kitchen Essentials",
     },
   ];
 
@@ -185,6 +260,104 @@ const EcommerceSolutions = () => {
     },
   ];
 
+  const services = [
+    {
+      icon: <FaBox />,
+      title: "Product Catalog & Inventory Management",
+      description:
+        "Your products are the heart of your store. We make sure they shine.",
+      features: [
+        "High-quality product listing with engaging titles & SEO-rich descriptions",
+        "Upload and management of product images, variants, and attributes",
+        "Category structuring for easy navigation & better customer experience",
+        "Real-time inventory updates to prevent overselling or stock-outs",
+      ],
+      platforms:
+        "Amazon, Flipkart, Meesho, Shopify, WooCommerce, Magento, Custom Stores",
+    },
+    {
+      icon: <FaTruck />,
+      title: "Order Processing & Fulfillment",
+      description:
+        "Fast and error-free order processing builds trust with your customers.",
+      features: [
+        "Processing of customer orders from multiple channels",
+        "Generating invoices, packing slips, and shipping labels",
+        "Coordinating with courier partners for smooth dispatch",
+        "Tracking shipments and ensuring timely delivery",
+        "Managing returns, replacements, and refunds professionally",
+      ],
+    },
+    {
+      icon: <FaAd />,
+      title: "Marketing & Sales Optimization",
+      description:
+        "Bring more visitors, convert them into buyers, and increase revenue.",
+      features: [
+        "SEO optimization of product pages for higher marketplace rankings",
+        "Running Google Ads & Meta Ads campaigns for targeted sales",
+        "Social media promotions & engagement to drive traffic",
+        "Marketplace-specific promotions (Amazon ads, Flipkart Boost)",
+        "A/B testing to improve product page conversions",
+      ],
+    },
+    {
+      icon: <FaHeadset />,
+      title: "Customer Support Outsourcing",
+      description: "Delight your customers with responsive support.",
+      features: [
+        "24/7 email, chat, and phone support",
+        "Handling queries on orders, shipping, and returns",
+        "Complaint resolution and customer satisfaction follow-ups",
+        "Building loyalty with excellent after-sales support",
+      ],
+    },
+    {
+      icon: <FaChartBar />,
+      title: "Analytics & Business Insights",
+      description: "Make smarter decisions with data-driven strategies.",
+      features: [
+        "Sales and performance dashboards (Power BI, Tableau, Looker Studio)",
+        "Weekly and monthly reports with KPIs",
+        "Customer behavior analysis for cross-selling & upselling",
+        "Predictive insights for future growth",
+      ],
+    },
+  ];
+
+  const targetAudience = [
+    {
+      title: "New Online Sellers",
+      description:
+        "Launch your online store quickly and professionally with expert support.",
+      icon: <FaShoppingCart />,
+    },
+    {
+      title: "Established E-Commerce Businesses",
+      description:
+        "Streamline and outsource operations to scale faster and save resources.",
+      icon: <FaStore />,
+    },
+    {
+      title: "Amazon/Flipkart Sellers",
+      description:
+        "Optimize product listings and boost visibility for faster marketplace growth.",
+      icon: <FaAmazon />,
+    },
+    {
+      title: "D2C Brands",
+      description:
+        "Enhance customer experience with consistent, reliable operational support.",
+      icon: <FaUsers />,
+    },
+    {
+      title: "Small Businesses",
+      description:
+        "Explore online marketplaces and grow your presence with ease.",
+      icon: <FaIndustry />,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -201,10 +374,14 @@ const EcommerceSolutions = () => {
         <div className={styles.container} data-aos="fade-up">
           <div className={styles.heroText}>
             <h1>E-Commerce Solutions by Aroliya</h1>
+            
             <p>
-              Aroliya delivers end-to-end E‑Commerce Solutions to build, manage,
-              and scale online stores—covering catalog, orders, support, and
-              marketing.
+              In today's digital-first world, running a successful online store
+              requires more than just uploading products. From catalog
+              management and order processing to customer support and marketing,
+              every step matters. At Aroliya, we offer complete E-Commerce
+              Solutions designed to help you build, manage, and scale your
+              online business smoothly.
             </p>
             <div className={styles.heroBtns}>
               <button className={styles.btnPrimary}>Start Now</button>
@@ -214,6 +391,41 @@ const EcommerceSolutions = () => {
           <div className={styles.heroImage}>
             <Image src={ecomarce} alt="E-commerce solutions" />
           </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className={styles.services}>
+        <div className={styles.sectionHead}>
+          <h2>Our Comprehensive E-Commerce Services</h2>
+          <p>
+            Everything you need to build, manage, and grow your online store
+          </p>
+        </div>
+
+        <div className={styles.servicesGrid}>
+          {services.map((service, index) => (
+            <div key={index} className={styles.serviceCard} data-aos="fade-up">
+              <div className={styles.iconWrapper}>{service.icon}</div>
+              <h3 className={styles.cardTitle}>{service.title}</h3>
+              <p className={styles.cardDesc}>{service.description}</p>
+              <ul className={styles.cardFeatures}>
+                {service.features.map((feature, i) => (
+                  <li key={i}>
+                    <div className={styles.cardContnet}>
+                      <Image src={tick} />
+                      <p>{feature}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              {service.platforms && (
+                <div className={styles.platforms}>
+                  <strong>Platforms we support:</strong> {service.platforms}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -237,6 +449,25 @@ const EcommerceSolutions = () => {
               <div className={styles.benefitIcon}>{benefit.icon}</div>
               <h3>{benefit.title}</h3>
               <p>{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.audience}>
+        <div className={styles.sectionHead}>
+          <h2>Who Can Benefit from Our Services?</h2>
+          <p>
+            Our solutions are designed for a variety of e-commerce businesses
+          </p>
+        </div>
+
+        <div className={styles.audienceGrid}>
+          {targetAudience.map((aud, index) => (
+            <div key={index} className={styles.audienceCard} data-aos="fade-up">
+              <div className={styles.iconWrapper}>{aud.icon}</div>
+              <h3 className={styles.audienceTitle}>{aud.title}</h3>
+              <p className={styles.audienceDesc}>{aud.description}</p>
             </div>
           ))}
         </div>
@@ -307,13 +538,22 @@ const EcommerceSolutions = () => {
         <div className={styles.sectionHead}>
           <h2>What Clients Say</h2>
         </div>
-        <div className={styles.grid}>
-          {testimonials.map((t, index) => (
-            <div key={index} className={styles.testimonial}>
-              <p>{t.text}</p>
-              <h4>{t.author}</h4>
-            </div>
-          ))}
+        <div className={styles.slider}>
+          <div className={styles.slideTrack}>
+            {testimonials.map((t, index) => (
+              <div key={index} className={styles.testimonial}>
+                <p>{t.text}</p>
+                <h4>{t.author}</h4>
+              </div>
+            ))}
+            {/* Duplicate for infinite scroll loop */}
+            {testimonials.map((t, index) => (
+              <div key={`dup-${index}`} className={styles.testimonial}>
+                <p>{t.text}</p>
+                <h4>{t.author}</h4>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

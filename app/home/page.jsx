@@ -6,11 +6,13 @@ import TrustedCompanies from "./component/Trusted-Companies/page";
 import Review from "./component/testimonials/page";
 import Footer from "./footer/page"
 import FAQ from "./component/faqs/page";
+import Right from './component/left-right/page';
 export default function page() {
   return (
     <div>
       <Nav />
       <Hero />
+       <Right />
       <Service />
       <HowItWorks />
       <TrustedCompanies />

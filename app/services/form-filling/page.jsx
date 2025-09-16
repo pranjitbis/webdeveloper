@@ -13,10 +13,13 @@ import formFilling from "../../../public/icons/form-filling-service.png";
 import support from "../../../public/icons/form-support.png";
 import Error from "../../../public/icons/Error-Free-Filling.png";
 import Professional from "../../../public/icons/Professional-Online-Application.png";
+import Custom from "../../../public/icons/Custom-Solutions.png";
+import Pricing from "../../../public/icons/pricing.png";
 import "aos/dist/aos.css";
 
 import Image from "next/image";
 const ServiceDetail = () => {
+  const [fileName, setFileName] = useState("No file chosen");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -128,7 +131,11 @@ const ServiceDetail = () => {
       ],
     },
   ];
-
+  const handleFileChange = (e) => {
+    if (e.target.files[0]) {
+      setFileName(e.target.files[0].name);
+    }
+  };
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -299,7 +306,7 @@ const ServiceDetail = () => {
             </div>
 
             <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
-                 <div className={styles.benefitIcon}>
+              <div className={styles.benefitIcon}>
                 <Image src={Error} alt="Secure" />
               </div>
               <h4>Error-Free Form Filling Service</h4>
@@ -307,12 +314,30 @@ const ServiceDetail = () => {
             </div>
 
             <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
-                 <div className={styles.benefitIcon}>
+              <div className={styles.benefitIcon}>
                 <Image src={Professional} alt="Secure" />
               </div>
               <h4>Professional Online Application Filling</h4>
               <p>
                 Expert guidance for students, job seekers, and professionals.
+              </p>
+            </div>
+
+            <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
+              <div className={styles.benefitIcon}>
+                <Image src={Pricing} alt="Secure" />
+              </div>
+              <h4>Affordable pricing – starting at just ₹99 per form</h4>
+              <p>Support for bulk submissions for businesses & agencies</p>
+            </div>
+            <div className={`${styles.benefitCard} ${styles.fadeInUp}`}>
+              <div className={styles.benefitIcon}>
+                <Image src={Custom} alt="Secure" />
+              </div>
+              <h4>Custom Solutions</h4>
+              <p>
+                Aroliya tailors every solution to your unique business needs for
+                maximum impact.
               </p>
             </div>
           </div>
@@ -397,7 +422,13 @@ const ServiceDetail = () => {
                     </select>
                   </div>
                 </div>
-
+                <div className={styles.uploadBox}>
+                  <label className={styles.label}>
+                    <input type="file" onChange={handleFileChange} />
+                    Choose File
+                  </label>
+                  <span className={styles.fileName}>{fileName}</span>
+                </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="specificService">
                     Specific Service Needed *

@@ -68,14 +68,14 @@ const Services = () => {
     },
     {
       image: DataVisualizationServices,
-      title: "Data Visualization and AI solution",
+      title: "Data & AI Solution",
       features: [
         "Power BI, Tableau, Looker Studio dashboards",
         "Custom Data Visualizations",
-        "Business Reporting",
+        "Analyzing and presenting data for informed business decisions.",
         "AI dashboards turn raw data into clear insights.",
       ],
-      buttonText: "Data Visualization Services",
+      buttonText: "Get Started ",
     },
   ];
 

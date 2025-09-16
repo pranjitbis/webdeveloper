@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: space-around;
   gap: 8%;
+  position: relative;
+  bottom: 70px;
 }
 
 .heroContent {
@@ -89,13 +91,14 @@
 
 .graphicElement {
   width: 100%;
-  height: 680px;
+  height: auto;
   border-radius: 20px;
 }
 
 .graphicElement img {
   width: 100%;
   max-width: 660px;
+  height: auto;
 }
 
 /* Section Styles */
@@ -123,7 +126,10 @@
   padding: 80px 10px;
   background-color: #f8f9fa;
   border-radius: 20px;
-  margin: 40px 0;
+  margin: 0px 0 0;
+  position: relative;
+  z-index: 1;
+  bottom: 120px;
 }
 
 .servicesGrid {
@@ -131,6 +137,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   padding: 60px;
+  align-items: center;
 }
 
 .serviceCard {
@@ -217,7 +224,11 @@
 
 /* Process Section */
 .process {
-  padding: 80px 0;
+  position: relative;
+  bottom: 183px;
+  background-color: white;
+  z-index: 2;
+  padding: 40px 20px 0;
 }
 
 .processSteps {
@@ -244,7 +255,7 @@
 .stepNumber {
   width: 60px;
   height: 60px;
-  background: #3498db;
+  background: #99aebd;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -267,17 +278,21 @@
 
 /* Pricing Section */
 .pricing {
-  padding: 80px 0;
+  padding: 50px 0 0;
   background-color: #f8f9fa;
   border-radius: 20px;
-  margin: 40px 0;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  bottom: 150px;
 }
 
 .pricingPlans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  padding: 50px;
+  padding: 50px 20px 0;
+  align-items: center;
 }
 
 .planCard {
@@ -389,6 +404,7 @@
   background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
   color: white;
   padding: 20px;
+  margin: -72px 0 0px;
 }
 
 .contactContainer {
@@ -514,6 +530,20 @@
   }
 }
 
+@media (max-width: 1299px) {
+  .hero {
+    bottom: 0;
+    padding: 120px 0;
+  }
+  .graphicElement {
+    max-width: 400px;
+  }
+  .services {
+
+    z-index: 1;
+    bottom: 20px;
+  }
+}
 @media (max-width: 1255px) {
   .hero {
     flex-direction: column;
@@ -542,7 +572,7 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 60px 0;
+    padding: 140px 0;
   }
 
   .heroContent {
@@ -566,10 +596,11 @@
     font-size: 2rem;
   }
 
-  .servicesGrid,
-  .pricingPlans,
-  .testimonialGrid {
-    grid-template-columns: 1fr;
+  .pricingPlans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    margin: auto;
+    justify-content: center;
   }
 
   .recommended {
@@ -587,7 +618,7 @@
 
 @media (max-width: 1300px) {
   .hero {
-  margin: -69px 0;
+    margin: -69px 0;
   }
 }
 @media (max-width: 400px) {

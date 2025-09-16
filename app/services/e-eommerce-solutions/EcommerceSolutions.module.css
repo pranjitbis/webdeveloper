@@ -360,6 +360,14 @@
   margin: 4rem auto 0;
 }
 
+.grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  max-width: 1150px;
+  margin: 4rem auto 0;
+}
+
 .benefitCard {
   background: white;
   border-radius: 12px;
@@ -818,7 +826,7 @@
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
 
-  .cardContnet img{
+  .cardContnet img {
     position: relative;
     bottom: 10px;
   }

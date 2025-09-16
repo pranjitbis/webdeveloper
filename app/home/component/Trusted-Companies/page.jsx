@@ -89,7 +89,8 @@ export default function TrustedCompanies() {
   return (
     <section ref={ref} className={styles.trustedSection}>
       <div className={styles.trustedContainer}>
-        <h2 className={styles.trustedTitle}>Trusted By Leading Companies</h2>
+        <h2 className={styles.trustedTitle}>Use Brands Our Freelancers Get Inspired
+By </h2>
       </div>
 
       {/* Smooth Scroll-driven horizontal slider */}

@@ -7,8 +7,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../home/footer/page";
 import about from "../../public/about/sir-image.png";
+import team from "../../public/about/team-image.jpg";
 import Image from "next/image";
-
+import {
+  FaClock,
+  FaMoneyBillWave,
+  FaRegSmile,
+  FaHandsHelping,
+  FaShieldAlt,
+  FaRocket,
+  FaChartLine,
+  FaUsers,
+  FaCheckCircle,
+  FaGlobe,
+} from "react-icons/fa";
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,6 +34,60 @@ export default function About() {
       once: false, // false = re-trigger animation on scroll up/down
     });
   }, []);
+
+  const benefits = [
+    {
+      icon: <FaClock />,
+      title: "Save Time",
+      desc: "Automated workflows reduce manual work so you can focus on growth.",
+    },
+    {
+      icon: <FaMoneyBillWave />,
+      title: "Cost Effective",
+      desc: "Affordable solutions designed to fit small businesses and startups.",
+    },
+    {
+      icon: <FaRegSmile />,
+      title: "Stress-Free",
+      desc: "Easy-to-use tools that make business management simple and smooth.",
+    },
+    {
+      icon: <FaHandsHelping />,
+      title: "24/7 Support",
+      desc: "Dedicated support team available around the clock for your needs.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Secure & Reliable",
+      desc: "Enterprise-grade security ensures your data stays protected.",
+    },
+    {
+      icon: <FaRocket />,
+      title: "Boost Productivity",
+      desc: "Streamlined processes help your team achieve more in less time.",
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Data-Driven Insights",
+      desc: "Real-time analytics help you make smarter business decisions.",
+    },
+    {
+      icon: <FaUsers />,
+      title: "Scalable",
+      desc: "Our solutions grow with your business—no limitations, no stress.",
+    },
+    {
+      icon: <FaCheckCircle />,
+      title: "Proven Results",
+      desc: "Trusted by clients worldwide with measurable success stories.",
+    },
+    {
+      icon: <FaGlobe />,
+      title: "Global Reach",
+      desc: "Expand your business and connect with customers everywhere.",
+    },
+  ];
+
   return (
     <div>
       <Nav />
@@ -46,7 +112,6 @@ export default function About() {
               About the Founder
             </h2>
             <div className={styles.founderGrid}>
-         
               <div className={styles.founderContent} data-aos="fade-left">
                 <h3 className={styles.founderName}>Neeraj Baghel</h3>
                 <p className={styles.founderTitle}>Founder & CEO of Aroliya</p>
@@ -56,13 +121,13 @@ export default function About() {
                     using technology to solve real-world problems. With a
                     background in data science, artificial intelligence, and
                     digital innovation, Neeraj has been recognized for his
-                    performance and creativity in professional roles.
-                    His vision for Aroliya is not just about offering
-                    services—it's about building a platform where businesses
-                    find solutions and freelancers find opportunities.
-                    Neeraj's leadership combines innovation, dedication, and
-                    strategic thinking, making Aroliya a brand that stands for
-                    reliability and growth. His belief is simple:
+                    performance and creativity in professional roles. His vision
+                    for Aroliya is not just about offering services—it's about
+                    building a platform where businesses find solutions and
+                    freelancers find opportunities. Neeraj's leadership combines
+                    innovation, dedication, and strategic thinking, making
+                    Aroliya a brand that stands for reliability and growth. His
+                    belief is simple:
                     <em>
                       "Work should be smarter, not harder—and technology should
                       make life easier for everyone."
@@ -70,7 +135,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-                   <div className={styles.founderImageWrapper}>
+              <div className={styles.founderImageWrapper}>
                 <div
                   className={styles.founderPlaceholder}
                   data-aos="fade-right"
@@ -116,21 +181,7 @@ export default function About() {
 
               <div className={styles.imageWrapper} data-aos="fade-left">
                 <div className={styles.placeholderImage}>
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 6H19C20.1046 6 21 6.89543 21 8V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V8C3 6.89543 3.89543 6 5 6H7M17 6V5C17 3.89543 16.1046 3 15 3H9C7.89543 3 7 3.89543 7 5V6M17 6H7M10 12H14M12 10V14"
-                      stroke="#4facfe"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  <p>Team Collaboration</p>
+                  <Image src={team} alt="cc" />
                 </div>
               </div>
             </div>
@@ -355,6 +406,26 @@ export default function About() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={styles.benefits}>
+          <div className={styles.sectionHead}>
+            <h2>Why Choose Aroliya?</h2>
+            <p>
+              Using our platform means saving time, reducing costs, and focusing
+              on what really matters—growing your business.
+            </p>
+          </div>
+
+          <div className={styles.grids} data-aos="fade-up">
+            {benefits.map((b, i) => (
+              <div key={i} className={styles.card}>
+                <div className={styles.icon}>{b.icon}</div>
+                <h3>{b.title}</h3>
+                <p>{b.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
         <Footer />

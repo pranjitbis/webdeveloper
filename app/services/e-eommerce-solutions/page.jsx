@@ -11,6 +11,7 @@ import {
   FaHeadset,
   FaRocket,
   FaLightbulb,
+  FaBrain,
   FaPencilRuler,
   FaCode,
   FaCheckCircle,
@@ -23,6 +24,7 @@ import {
   FaBoxOpen,
   FaAd,
   FaStore,
+  FaBuilding,
   FaAmazon,
   FaIndustry,
   FaChartBar,
@@ -90,9 +92,9 @@ const EcommerceSolutions = () => {
         { text: "1 Admin Account Access", included: true },
         { text: "Pre-built Themes", included: true },
         { text: "Mobile-Responsive Design", included: true },
-        { text: "Basic SEO Tools", included: true },
+        { text: "Basic SEO Tools", included: false },
         { text: "Abandoned Cart Recovery", included: false },
-        { text: "Multi-Currency & Multi-Language Support", included: false },
+
         { text: "Inventory & Order Management", included: true },
         { text: "Automatic Backups", included: false },
       ],
@@ -111,8 +113,7 @@ const EcommerceSolutions = () => {
         { text: "Advanced SEO Tools", included: true },
         { text: "Abandoned Cart Recovery", included: true },
         { text: "Up to 3 Admin Accounts", included: true },
-        { text: "Multi-Currency & Multi-Language Support", included: false },
-        { text: "Inventory & Order Management", included: false },
+
         { text: "Automatic Backups (Daily)", included: false },
       ],
       button: "Get Started",
@@ -130,7 +131,6 @@ const EcommerceSolutions = () => {
         { text: "Mobile-Responsive Design", included: true },
         { text: "Advanced SEO & Marketing Tools", included: true },
         { text: "Abandoned Cart Recovery", included: true },
-        { text: "Multi-Currency & Multi-Language Support", included: true },
         { text: "Inventory & Order Management", included: true },
         { text: "Automatic Backups (Hourly)", included: true },
       ],
@@ -323,6 +323,17 @@ const EcommerceSolutions = () => {
         "Predictive insights for future growth",
       ],
     },
+    {
+      icon: <FaBrain />,
+      title: "Data & AI Solutions",
+      description: "Leverage advanced AI to scale your business smarter.",
+      features: [
+        "Predictive analytics for sales trends",
+        "AI-powered chatbots for instant support",
+        "Intelligent inventory management",
+        "Personalized recommendations for customers",
+      ],
+    },
   ];
 
   const targetAudience = [
@@ -356,6 +367,12 @@ const EcommerceSolutions = () => {
         "Explore online marketplaces and grow your presence with ease.",
       icon: <FaIndustry />,
     },
+    {
+      title: "Enterprise Solutions",
+      description:
+        "Robust, scalable solutions tailored for large enterprises to manage high-volume operations and maximize growth.",
+      icon: <FaBuilding />,
+    },
   ];
 
   return (
@@ -374,7 +391,7 @@ const EcommerceSolutions = () => {
         <div className={styles.container} data-aos="fade-up">
           <div className={styles.heroText}>
             <h1>E-Commerce Solutions by Aroliya</h1>
-            
+
             <p>
               In today's digital-first world, running a successful online store
               requires more than just uploading products. From catalog
@@ -413,7 +430,7 @@ const EcommerceSolutions = () => {
                 {service.features.map((feature, i) => (
                   <li key={i}>
                     <div className={styles.cardContnet}>
-                      <Image src={tick} />
+                      <Image src={tick} alt="err" />
                       <p>{feature}</p>
                     </div>
                   </li>
@@ -498,7 +515,7 @@ const EcommerceSolutions = () => {
           <h2>Pricing Plans</h2>
           <p>Flexible packages designed for every stage of your business.</p>
         </div>
-        <div className={styles.grid}>
+        <div className={styles.grids}>
           {pricingPlans.map((plan, index) => (
             <div
               data-aos="zoom-out-up"

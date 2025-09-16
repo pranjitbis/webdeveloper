@@ -12,9 +12,6 @@ import Marketing from "../../../public/icons/Marketing.png";
 import technical from "../../../public/icons/technical-support.png";
 import TickMark from "../../../public/icons/Mark-Tick.png";
 
-
-
-
 const VirtualAssistance = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -145,6 +142,8 @@ const VirtualAssistance = () => {
         "Basic data entry tasks",
         "Up to 3 social media posts weekly",
         "Email support",
+        "Priority email & chat support",
+        "24/7 priority support",
       ],
       recommended: false,
     },
@@ -160,6 +159,7 @@ const VirtualAssistance = () => {
         "Social media management",
         "Basic graphic design",
         "Priority email & chat support",
+        "24/7 priority support",
       ],
       recommended: true,
     },
@@ -256,7 +256,7 @@ const VirtualAssistance = () => {
                 onMouseEnter={() => setActiveService(index)}
               >
                 <div className={styles.serviceIcon}>
-                  <Image src={service.icon} alt="err"  />
+                  <Image src={service.icon} alt="err" />
                 </div>
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                 <p className={styles.serviceDescription}>
@@ -331,7 +331,7 @@ const VirtualAssistance = () => {
                   {plan.features.map((feature, i) => (
                     <li key={i} className={styles.planFeature}>
                       <div className={styles.TickMark}>
-                        <Image src={TickMark} alt="err"  />
+                        <Image src={TickMark} alt="err" />
                         {feature}
                       </div>
                     </li>

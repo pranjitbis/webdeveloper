@@ -577,7 +577,7 @@ const EcommerceSolutions = () => {
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent} data-aos="fade-up">
-          <h2>📞 Get Started with Aroliya's E-Commerce Solutions</h2>
+          <h2>Get Started with Aroliya's E-Commerce Solutions</h2>
           <p>
             Don't let e-commerce management slow you down. Focus on growing your
             brand while we handle the back-end operations.

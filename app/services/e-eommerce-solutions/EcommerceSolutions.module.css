@@ -231,7 +231,7 @@
    Testimonials Section
    ============================= */
 .testimonials {
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
   background: #f9f9f9;
   border-radius: 40px;
   overflow: hidden;
@@ -366,6 +366,7 @@
   gap: 2rem;
   max-width: 1150px;
   margin: 4rem auto 0;
+  justify-content: center;
 }
 
 .benefitCard {
@@ -424,6 +425,7 @@
   padding: 0px 4rem;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   gap: 74px;
+  justify-content: center;
 }
 
 .cardContnet {
@@ -735,7 +737,7 @@
 
   .heroImage {
     position: relative;
-    bottom: 440px;
+    bottom: 380px;
   }
 
   .heroImage img {
@@ -763,13 +765,22 @@
   }
 }
 
+@media (max-width: 400px) {
+  .serviceCard {
+    margin: 0px 10px;
+  }
+  .heroImage {
+    position: relative;
+    bottom: 480px;
+  }
+}
 @media (max-width: 620px) {
   .heroText h1 {
     font-size: 1.7rem;
   }
 
   .sectionHead h2 {
-    font-size: 23px;
+    font-size: 28px;
   }
 
   .sectionHead p {
@@ -795,11 +806,6 @@
     top: 290px;
   }
 
-  .heroImage {
-    position: relative;
-    bottom: 560px;
-  }
-
   .heroImage img {
     height: 300px;
     width: 350px;
@@ -822,7 +828,6 @@
   }
 
   .servicesGrid {
-    padding: 0px;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
 

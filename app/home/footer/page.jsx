@@ -123,8 +123,8 @@ const Footer = () => {
 
             <div className={styles.contactItem}>
               <FaPhone size={16} className={styles.contactIcon} />
-              <a href="tel:+919015351755" className={styles.contactLink}>
-                +91 9015351755
+              <a href="tel:+919870519002" className={styles.contactLink}>
+                +91 9870519002
               </a>
             </div>
             <div className={styles.contactItem}>

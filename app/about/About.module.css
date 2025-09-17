@@ -15,7 +15,7 @@
 .heroSection {
   background: linear-gradient(135deg, #1a2a6c 0%, #1081e4 100%);
   color: white;
-  padding: 11rem 2rem 10rem;
+  padding: 6rem 2rem 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -102,7 +102,12 @@
 .icon {
   font-size: 2.5rem;
   color: #2563eb; /* Primary blue */
-  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: rgba(226, 226, 226, 0.527);
+  height: 70px;
+  width: 70px;
+  padding: 15px 10px;
+  margin: 0rem auto 2rem ;
 }
 
 .card h3 {
@@ -210,10 +215,11 @@
   margin-bottom: 1rem;
 }
 
-.placeholderImage img{
+.placeholderImage img {
   border-radius: 20px;
   width: 100%;
   height: auto;
+
 }
 
 /* Vision & Mission Section */
@@ -286,9 +292,10 @@
 }
 
 .founderPlaceholder img {
-  width: 409px;
-  height: 409px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
+  max-width: 420px;
 }
 
 .founderPlaceholder {
@@ -313,7 +320,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #4a5568;
-  width: 120%;
+  width: 100%;
   margin-bottom: 1.5rem;
 }
 
@@ -451,6 +458,7 @@
   .founderGrid {
     grid-template-columns: 1fr;
     gap: 3rem;
+    margin: 0px;
   }
 
   .valuesGrid {
@@ -459,9 +467,6 @@
 }
 
 @media (max-width: 768px) {
-
-
-
   .heroTitle {
     font-size: 2.5rem;
   }
@@ -508,7 +513,10 @@
   }
 
   .founderPlaceholder {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+
+    justify-content: center;
+    display: flex;
   }
 }

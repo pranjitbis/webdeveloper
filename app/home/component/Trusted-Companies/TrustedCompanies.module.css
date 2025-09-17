@@ -76,3 +76,14 @@
   margin-top: 18px;
   line-height: 1.6;
 }
+
+@media (max-width: 780px) {
+.trustedTitle{
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.9rem;
+  margin: auto;
+  padding: 0;
+}
+
+}

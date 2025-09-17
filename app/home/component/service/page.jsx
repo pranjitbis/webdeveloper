@@ -8,7 +8,7 @@ import fourth from "../../../../public/icons/online-booking.png";
 import DataVisualizationServices from "../../../../public/icons/data-analytics.png";
 import onlineBooking from "../../../../public/icons/online-booking.png";
 import MachineLearningSolutions from "../../../../public/icons/freelancer-3d.png";
-
+import Link from "next/link";
 const Services = () => {
   const services = [
     {
@@ -31,6 +31,7 @@ const Services = () => {
         "Banking & Financial Forms",
         "Travel & Other Services",
       ],
+      link: "/services/form-filling",
       buttonText: "Submit Request",
     },
     {
@@ -42,6 +43,7 @@ const Services = () => {
         "Document formatting and editing",
         "Data entry and organization",
       ],
+      link: "/services/virtual-assistance",
       buttonText: "Hire a VA",
     },
     {
@@ -53,6 +55,7 @@ const Services = () => {
         "Helping Sellers Grow Sales with Digital Marketing Strategies",
         "Customer Support Outsourcing",
       ],
+      link: "/services/e-eommerce-solutions",
       buttonText: "Get Started",
     },
     {
@@ -64,6 +67,7 @@ const Services = () => {
         "Bus Tickets — Verified operators and easy reschedules",
         "Hotel Stays — Curated properties with secure booking",
       ],
+      link: "/services/travel-bookings",
       buttonText: "Book Now",
     },
     {
@@ -75,6 +79,7 @@ const Services = () => {
         "Analyzing and presenting data for informed business decisions.",
         "AI dashboards turn raw data into clear insights.",
       ],
+      link: "/services/data-visualization",
       buttonText: "Get Started ",
     },
   ];
@@ -100,7 +105,11 @@ const Services = () => {
                 ))}
               </ul>
 
-              <button className={styles.ctaButton}>{service.buttonText}</button>
+              <Link href={service.link || "#"}>
+                <button className={styles.ctaButton}>
+                  {service.buttonText}
+                </button>
+              </Link>
             </div>
           ))}
         </div>

@@ -539,7 +539,6 @@
     max-width: 400px;
   }
   .services {
-
     z-index: 1;
     bottom: 20px;
   }
@@ -573,6 +572,14 @@
     flex-direction: column;
     text-align: center;
     padding: 140px 0;
+  }
+
+  .process {
+    position: relative;
+    bottom: 143px;
+    background-color: white;
+    z-index: 2;
+    padding: 40px 20px 30px;
   }
 
   .heroContent {
@@ -622,6 +629,7 @@
   }
 }
 @media (max-width: 400px) {
+
   .ctaButton,
   .primaryButton {
     padding: 16px 32px;

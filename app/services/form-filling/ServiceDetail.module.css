@@ -376,11 +376,11 @@
   gap: 12px;
   background: #f9f9f9;
   border: 2px dashed #2563eb;
-  padding: 24px 140px;
+  padding: 24px 10px;
   border-radius: 10px;
   cursor: pointer;
   max-width: 800px;
- margin: 0px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .label {
@@ -465,6 +465,10 @@
   .placeholderImage img {
     height: 440px !important;
   }
+  .description {
+    width: 100%;
+    max-width: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -494,7 +498,7 @@
   .description {
     font-size: 1.1rem;
     width: 100%;
-    max-width: 470px;
+    max-width: 380px;
     margin: 20px auto;
   }
 

@@ -9,10 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@prisma/client": "^6.16.2",
     "aos": "^2.3.4",
     "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "^15.5.2",
     "nextjs-google-analytics": "^2.3.7",
     "react": "^19.1.0",
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.5.2"
+    "eslint-config-next": "15.5.2",
+    "prisma": "^6.16.2"
   }
 }

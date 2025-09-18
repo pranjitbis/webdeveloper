@@ -78,7 +78,7 @@ const DataVisualization = () => {
         "Basic Chart Types",
         "Data Import from CSV & Excel",
         "Email Support",
-        "✔ 20+ Chart Types",
+        "20+ Chart Types",
       ],
     },
     {
@@ -335,7 +335,7 @@ const DataVisualization = () => {
             enterprises.
           </p>
         </div>
-        <div className={styles.grid}>
+        <div className={styles.grids}>
           {pricingPlans.map((plan, index) => (
             <div key={index} className={styles.priceCard}>
               <h3>{plan.name}</h3>

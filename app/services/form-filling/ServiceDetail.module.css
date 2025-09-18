@@ -469,6 +469,13 @@
     width: 100%;
     max-width: 18px;
   }
+  .title {
+    max-width: 400px !important;
+  }
+
+  .description {
+    padding: 0px 30px;
+  }
 }
 
 @media (max-width: 768px) {

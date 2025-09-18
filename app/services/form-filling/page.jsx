@@ -422,35 +422,7 @@ const ServiceDetail = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.uploadBox}>
-                  <label className={styles.label}>
-                    <input type="file" onChange={handleFileChange} />
-                    Choose File
-                  </label>
-                  <span className={styles.fileName}>{fileName}</span>
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="specificService">
-                    Specific Service Needed *
-                  </label>
-                  <select
-                    id="specificService"
-                    name="specificService"
-                    value={formData.specificService}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Select a service</option>
-                    {formData.serviceCategory &&
-                      serviceCategories
-                        .find((cat) => cat.id === formData.serviceCategory)
-                        ?.services.map((service, index) => (
-                          <option key={index} value={service}>
-                            {service}
-                          </option>
-                        ))}
-                  </select>
-                </div>
+              
 
                 <div className={styles.formGroup}>
                   <label htmlFor="message">Additional Details</label>

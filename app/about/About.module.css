@@ -471,6 +471,12 @@
     font-size: 2.5rem;
   }
 
+  .grids{
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+   gap: 3rem;
+  }
+
   .heroSubtitle {
     font-size: 1.2rem;
   }

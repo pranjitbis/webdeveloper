@@ -36,7 +36,7 @@ const Services = () => {
     },
     {
       image: second,
-      title: "Virtual Assistant Services",
+      title: "Virtual Assistant",
       features: [
         "Calendar booking and management",
         "Email follow-ups and responses",

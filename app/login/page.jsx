@@ -53,9 +53,7 @@ export default function Login() {
         localStorage.setItem("role", data.role);
         localStorage.setItem("user", JSON.stringify(data.user));
 
-        router.push(
-          data.role === "admin" ? "/dashboard/admin" : "/dashboard/user"
-        );
+        router.push(data.role === "admin" ? "/wp-admin/" : "/dashboard/user/");
       }
     } catch (error) {
       setMessage("An error occurred. Please try again.");

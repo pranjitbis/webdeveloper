@@ -121,6 +121,23 @@
     background-color: rgb(245, 245, 245);
   }
 }
+@media (max-width: 1200px) {
+  .serviceCard img {
+    width: 60%;
+    height: 270px;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    background-color: rgb(245, 245, 245);
+  }
+  .servicesGrid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+}
 @media (max-width: 768px) {
   .services {
     padding: 2rem 1rem;

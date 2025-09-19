@@ -29,13 +29,12 @@ export default function Hero() {
           <div className={`${styles.slide} ${styles.slideThree}`}>
             <div className={styles.slideContent}>
               <div className={styles.welcomeSection}>
-               
-                <h1>Welcome to Aroliya—let's get started.</h1>
+                <h1>Welcome to Aroliya – </h1>
                 <p>
-                  Fast, secure, and affordable solutions across form filling,
-                  virtual assistance, e-commerce, travel bookings, data
-                  visualization, ML, and freelancer services—built to help
-                  connect, work, and earn.
+                  India’s No. 1 Platform for Smart Online Services From online
+                  form filling to travel & hotel bookings, web development, Data
+                  & AI and eCommerce solutions – Aroliya is your trusted partner
+                  for fast, reliable, and hassle-free digital services.
                 </p>
 
                 <div className={styles.heroButtons}>

@@ -187,13 +187,15 @@
 
 /* Slide Three Specific Styles */
 .slideThree {
-  background-image: url("/hero/bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/hero/bg.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   padding: 0 !important;
+  color: #fff; /* optional: makes text readable */
 }
-
-
 
 .namasteIcon {
   margin-bottom: 1.5rem;
@@ -294,9 +296,9 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .trustBadge img{
-   position: relative;
-   top: 29px; 
+  .trustBadge img {
+    position: relative;
+    top: 29px;
   }
 
   .welcomeSection {

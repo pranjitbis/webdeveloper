@@ -48,7 +48,7 @@ const companies = [
     name: "YouTube",
     logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg",
   },
-  
+
   {
     name: "Samsung",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
@@ -89,8 +89,9 @@ export default function TrustedCompanies() {
   return (
     <section ref={ref} className={styles.trustedSection}>
       <div className={styles.trustedContainer}>
-        <h2 className={styles.trustedTitle}>Brands Our Freelancers Get Inspired
-By </h2>
+        <h2 className={styles.trustedTitle}>
+          Brands Our Freelancers Get Inspired By{" "}
+        </h2>
       </div>
 
       {/* Smooth Scroll-driven horizontal slider */}
@@ -107,7 +108,6 @@ By </h2>
           ))}
         </motion.div>
       </div>
-
     </section>
   );
 }

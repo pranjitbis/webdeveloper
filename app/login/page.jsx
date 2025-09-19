@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./Login.module.css";
 import { useRouter } from "next/navigation";
 import { FaEye, FaEyeSlash, FaGoogle, FaGithub, FaUser } from "react-icons/fa";
-
+import Nav from "../home/component/Nav/page";
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -82,101 +82,108 @@ export default function Login() {
   }
 
   return (
-    <div className={styles.container}>
-      <div
-        className={`${styles.loginCard} ${isVisible ? styles.cardVisible : ""}`}
-      >
-        <div className={styles.header}>
-          <div className={styles.logo}>
-            <FaUser className={styles.logoIcon} />
-          </div>
-          <h2 className={styles.title}>Welcome Back</h2>
-          <p className={styles.subtitle}>Sign in to your account</p>
-        </div>
-
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.inputGroup}>
-            <label htmlFor="email" className={styles.label}>
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              className={styles.input}
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              required
-            />
+    <>
+      <Nav />
+      <div className={styles.container}>
+        <div
+          className={`${styles.loginCard} ${
+            isVisible ? styles.cardVisible : ""
+          }`}
+        >
+          <div className={styles.header}>
+            <div className={styles.logo}>
+              <FaUser className={styles.logoIcon} />
+            </div>
+            <h2 className={styles.title}>Welcome Back</h2>
+            <p className={styles.subtitle}>Sign in to your account</p>
           </div>
 
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>password</label>
-
-            <div className={styles.passwordWrapper}>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.inputGroup}>
+              <label htmlFor="email" className={styles.label}>
+                Email
+              </label>
               <input
-                id={styles.password}
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter your password"
+                id="email"
+                type="email"
+                placeholder="Enter your email"
                 className={styles.input}
-                value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
               />
-              <span
-                className={styles.eyeIcon}
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-              </span>
             </div>
+
+            <div className={styles.inputGroup}>
+              <label className={styles.label}>password</label>
+
+              <div className={styles.passwordWrapper}>
+                <input
+                  id={styles.password}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter your password"
+                  className={styles.input}
+                  value={form.password}
+                  onChange={(e) =>
+                    setForm({ ...form, password: e.target.value })
+                  }
+                  required
+                />
+                <span
+                  className={styles.eyeIcon}
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className={`${styles.button} ${
+                isLoading ? styles.buttonLoading : ""
+              }`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  <span className={styles.spinner}></span>
+                  Signing in...
+                </>
+              ) : (
+                "Sign in"
+              )}
+            </button>
+          </form>
+
+          {message && (
+            <div
+              className={
+                message.includes("error")
+                  ? styles.errorMessage
+                  : styles.successMessage
+              }
+            >
+              {message}
+            </div>
+          )}
+
+          <div className={styles.footer}>
+            <p>
+              Don't have an account?{" "}
+              <a href="/register" className={styles.signupLink}>
+                Sign up
+              </a>
+            </p>
           </div>
+        </div>
 
-          <button
-            type="submit"
-            className={`${styles.button} ${
-              isLoading ? styles.buttonLoading : ""
-            }`}
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <>
-                <span className={styles.spinner}></span>
-                Signing in...
-              </>
-            ) : (
-              "Sign in"
-            )}
-          </button>
-        </form>
-
-        {message && (
-          <div
-            className={
-              message.includes("error")
-                ? styles.errorMessage
-                : styles.successMessage
-            }
-          >
-            {message}
-          </div>
-        )}
-
-        <div className={styles.footer}>
-          <p>
-            Don't have an account?{" "}
-            <a href="/register" className={styles.signupLink}>
-              Sign up
-            </a>
-          </p>
+        <div className={styles.backgroundAnimation}>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
         </div>
       </div>
-
-      <div className={styles.backgroundAnimation}>
-        <div className={styles.circle}></div>
-        <div className={styles.circle}></div>
-        <div className={styles.circle}></div>
-      </div>
-    </div>
+    </>
   );
 }

@@ -149,36 +149,34 @@ export default function About() {
         {/* Introduction Section */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <div className={styles.grid}>
-              <div data-aos="fade-right" className={styles.content}>
-                <h2 className={styles.sectionTitle}>Welcome to Aroliya</h2>
-                <div className={styles.textContent}>
-                  <p>
-                    A trusted digital solutions platform built on the vision of
-                    simplifying work and empowering people. Founded by Neeraj
-                    Baghel, Aroliya was created with a single goal in mind – to
-                    make technology accessible, efficient, and meaningful for
-                    businesses and individuals alike.
-                  </p>
-                  <p>
-                    At Aroliya, we believe that the future belongs to those who
-                    can harness the power of innovation and collaboration. Our
-                    journey started with the idea of creating a platform that
-                    not only delivers high-quality digital solutions but also
-                    builds a strong community of freelancers, clients, and
-                    businesses working together for growth.
-                  </p>
-                  <p>
-                    We are driven by values of trust, transparency, and
-                    excellence, ensuring that every service we provide adds
-                    measurable value to our clients' lives and businesses. With
-                    a focus on professionalism and reliability, Aroliya has been
-                    growing steadily as a name that people can depend on for
-                    their diverse digital needs.
-                  </p>
-                </div>
-              </div>
+            <div data-aos="fade-right" className={styles.content}>
+              <h2 className={styles.sectionTitle}>About Aroliya</h2>
 
+              <div className={styles.textContent}>
+                <p>
+                  A trusted digital solutions platform built on the vision of
+                  simplifying work and empowering people. Founded by Neeraj
+                  Baghel, Aroliya was created with a single goal in mind – to
+                  make technology accessible, efficient, and meaningful for
+                  businesses and individuals alike.
+                </p>
+                <p>
+                  At Aroliya, we believe that the future belongs to those who
+                  can harness the power of innovation and collaboration. Our
+                  journey started with the idea of creating a platform that not
+                  only delivers high-quality digital solutions but also builds a
+                  strong community of freelancers, clients, and businesses
+                  working together for growth.
+                </p>
+                <p>
+                  We are driven by values of trust, transparency, and
+                  excellence, ensuring that every service we provide adds
+                  measurable value to our clients' lives and businesses. With a
+                  focus on professionalism and reliability, Aroliya has been
+                  growing steadily as a name that people can depend on for their
+                  diverse digital needs.
+                </p>
+              </div>
               <div className={styles.imageWrapper} data-aos="fade-left">
                 <div className={styles.placeholderImage}>
                   <Image src={team} alt="cc" />

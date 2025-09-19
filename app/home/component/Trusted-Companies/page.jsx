@@ -89,7 +89,7 @@ export default function TrustedCompanies() {
   return (
     <section ref={ref} className={styles.trustedSection}>
       <div className={styles.trustedContainer}>
-        <h2 className={styles.trustedTitle}>Use Brands Our Freelancers Get Inspired
+        <h2 className={styles.trustedTitle}>Brands Our Freelancers Get Inspired
 By </h2>
       </div>
 

@@ -81,8 +81,9 @@
 /* Grid layout */
 .grids {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
 }
 
 /* Benefit card */
@@ -107,7 +108,7 @@
   height: 70px;
   width: 70px;
   padding: 15px 10px;
-  margin: 0rem auto 2rem ;
+  margin: 0rem auto 2rem;
 }
 
 .card h3 {
@@ -193,33 +194,14 @@
 }
 
 .imageWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.placeholderImage {
-  width: 100%;
-  height: 300px;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  color: #64748b;
-}
-
-.placeholderImage svg {
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .placeholderImage img {
   border-radius: 20px;
   width: 100%;
   height: auto;
-
+  max-width: 1200px;
 }
 
 /* Vision & Mission Section */
@@ -440,6 +422,24 @@
 }
 
 /* Responsive Design */
+
+@media (max-width: 1408px) {
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important;
+    gap: 1rem;
+  }
+
+
+}
+@media (max-width: 1616px) {
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
 @media (max-width: 968px) {
   .grid {
     grid-template-columns: 1fr;
